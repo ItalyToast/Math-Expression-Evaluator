@@ -192,5 +192,11 @@ namespace SimpleExpressionEvaluator.Tests
 
             Assert.That(compiled2(new { a, b }), Is.EqualTo((a + b) / a));
         }
+
+        [Test]
+        public void Can_Multiply_2_NegativeNumbers_Numbers()
+        {
+            Assert.That(engine.Evaluate("-15*-4"), Is.EqualTo(-15 * -4));
+        }
     }
 }
